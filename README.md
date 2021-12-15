@@ -32,11 +32,35 @@ Sample Input Puzzle Board: `[[-,-,-,-,-],[-,-,#,-,-],[-,-,-,-,-],[#,-,#,#,-],[-#
  
 a. Describe an algorithm to solve the above problem.
 
+  1. Get the row and col count for the Board.
+  2. Using another function, perform a BFS by:
+     - keeping track of the source and then the neighboring nodes in a deque
+     - keeping track of whether the location has been visited
+     - keeping track of the previous location prior to coming to the neighbor
+  3. While we still have neighbors and have not reached the destination square:
+     - pop the the first square in the queue
+     - for each of the the directions: left, up, down, right
+     - calculate the neighbor and check whether it is valid and not visited and
+  not blocked
+     - If the previous is valid, mark the neighbor as visited, update its previous
+  direction as the current node, and add it to the queue
+     - if the neighbor is the destination, then we can break early and begin
+  reporting the path
+     - else continue and repeat
+  4. Finally, take the previous data structure built and reconstruct the path by taking
+  the previous steps/direction taken and return the result.
+
 b. Implement your solution in a function solve_puzzle(Board, Source, Destination).
 Name your file Puzzle.py
 
-c. What is the time complexity of your solution? 
+c. What is the time complexity of your solution?
 
+ In worst case, the time taken to traverse the matrix is by visiting each cell is mn.
+ This implementation uses a regular deque that has queue and dequeue operations
+ of O(1) as there is no priority given for cells, they just need to be empty to visit. We
+ also only visit each cell once, as it is marked as visited and thus, the time
+ complexity is: O(m ⋅ n)
+ 
 d. (Extra Credit): For the above puzzle in addition to the output return a set of possible 
 directions as well in the form of a string. 
 For above example 1 Output: 7, LDDR 
