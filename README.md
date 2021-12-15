@@ -18,12 +18,6 @@ first cell; (1,2) represents the second cell in the first row. If there is not p
 source to destination return None. 
 
 Sample Input Puzzle Board: `[[-,-,-,-,-],[-,-,#,-,-],[-,-,-,-,-],[#,-,#,#,-],[-#,-,-,-]]`
-  
-`- - - - -` 
-`- - # - -`
-`- - - - -`
-`# - # # -`
-`- # - - -`
  
 * Example 1: (a,b) : (1,3) → (x,y): (3,3)
   - Output: 3 
