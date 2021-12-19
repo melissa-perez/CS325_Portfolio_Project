@@ -1,6 +1,6 @@
 # Apply Graph traversal to solve a problem (Portfolio Project Problem): 
 
-You are given a 2-D puzzle of size MxN, that has N rows and M column (N >= 3 ; M >= 3; M and N can be different).
+You are given a 2-D puzzle of size MxN, that has N rows and M column (N >= 3, M >= 3; M and N can be different).
 Each cell in the puzzle is either empty or has a barrier. An empty cell 
 is marked by ‘-’ (hyphen) and the one with a barrier is marked by ‘#’. You are given two 
 coordinates from the puzzle (a,b) and (x,y). You are currently located at (a,b) and want to 
