@@ -19,18 +19,18 @@ source to destination return None.
 
 Sample Input Puzzle Board: `[[-,-,-,-,-],[-,-,#,-,-],[-,-,-,-,-],[#,-,#,#,-],[-#,-,-,-]]`
  
-* Example 1: (a,b) : (1,3) → (x,y): (3,3)
+* Example 1: (a,b): (1,3) → (x,y): (3,3)
   - Output: 3 
-  - On possible direction to travel: LDDR, (1,3) → (1,2) → (2,2) → (3,2) → (3,3) 
+  - One possible direction to travel: LDDR, (1,3) → (1,2) → (2,2) → (3,2) → (3,3) 
  
 * Example 2: (a,b): (1,1) → (x,y): (5,5)
   - Output: 7
   - One possible direction to travel: DDRRRRDD, (1,1) → (2,1) → (3,1) → (3,2) → (3,3) → (3,4) → (3,5) → (4,5) → (5,5) 
  
-* Example 3: (a,b): (1,1) → (x,y) : (5,1)
+* Example 3: (a,b): (1,1) → (x,y): (5,1)
   - Output: None 
  
-a. Describe an algorithm to solve the above problem.
+**a. Describe an algorithm to solve the above problem.**
 
   1. Get the row and col count for the Board.
   2. Using another function, perform a BFS by:
@@ -50,10 +50,10 @@ a. Describe an algorithm to solve the above problem.
   4. Finally, take the previous data structure built and reconstruct the path by taking
   the previous steps/direction taken and return the result.
 
-b. Implement your solution in a function solve_puzzle(Board, Source, Destination).
-Name your file Puzzle.py
+**b. Implement your solution in a function solve_puzzle(Board, Source, Destination).
+Name your file Puzzle.py**
 
-c. What is the time complexity of your solution?
+**c. What is the time complexity of your solution?**
 
  In worst case, the time taken to traverse the matrix is by visiting each cell is mn.
  This implementation uses a regular deque that has queue and dequeue operations
@@ -61,6 +61,6 @@ c. What is the time complexity of your solution?
  also only visit each cell once, as it is marked as visited and thus, the time
  complexity is: O(m ⋅ n)
  
-d. (Extra Credit): For the above puzzle in addition to the output return a set of possible 
+**d. (Extra Credit): For the above puzzle in addition to the output return a set of possible 
 directions as well in the form of a string. 
-For above example 1 Output: 7, LDDR 
+For above example 1 Output: 7, LDDR**
